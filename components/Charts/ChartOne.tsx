@@ -162,8 +162,14 @@ const ChartOne: React.FC = () => {
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
-
-      <div id="chartOne" className="-ml-5 h-[355px] w-[105%]">
+      <div className="mb-4 justify-between gap-4 sm:flex">
+        <div>
+          <h4 className="text-xl font-semibold text-black dark:text-white">
+            RealTime Data
+          </h4>
+        </div>
+      </div>
+      <div id="chartOne" className="-ml-5 h-[450px] w-[105%]">
         <AdvancedRealTimeChart theme="dark" autosize></AdvancedRealTimeChart>
       </div>
 

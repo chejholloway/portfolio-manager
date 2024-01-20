@@ -3,6 +3,7 @@ import { ApexOptions } from "apexcharts";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
 
 interface ChartFourState {
   series: { data: number[] }[];
@@ -136,19 +137,20 @@ const ChartFour: React.FC = () => {
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5">
       <div>
         <h3 className="text-xl font-semibold text-black dark:text-white">
-          Visitors Analytics
+          Technical Analysis
         </h3>
       </div>
 
       <div className="mb-2">
-        <div id="chartFour" className="-ml-5">
+{/*         <div id="chartFour" className="-ml-5">
           <ApexCharts
             options={options}
             series={state.series}
             type="bar"
             height={350}
           />
-        </div>
+        </div> */}
+        <TechnicalAnalysis colorTheme="dark" width="100%"></TechnicalAnalysis>
       </div>
     </div>
   );
