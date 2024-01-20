@@ -102,22 +102,20 @@ const ChartTwo: React.FC = () => {
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
       <div className="mb-4 justify-between gap-4 sm:flex">
-        <div>
-          <h4 className="text-xl font-semibold text-black dark:text-white">
-            Bloomberg News
-          </h4>
-        </div>
+        <h4 className="text-xl font-semibold text-black dark:text-primary">
+          Bloomberg News
+        </h4>
       </div>
 
-      <div id="chartTwo" className="">
+      <>
         <ReactPlayer
-          light="https://teftellerlaw.com/wp-content/uploads/2015/07/logo-bloomberg-news.jpg"
+          light="https://talkingbiznews.com/wp-content/uploads/2015/09/Bloomberg-Live-300x300.png"
           playing
           controls
           url="https://www.youtube.com/watch?v=P0kV8em4NbI"
-          width="auto"
+          width="405px"
           height='450px'/>
-       </div>
+       </>
     </div>
   );
 };
