@@ -1,0 +1,29 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".eslintrc.json": true,
+    ".gitignore": true,
+    ".next": true,
+    ".vscode": true,
+    "LICENSE": true,
+    "next-env.d.ts": true,
+    "next.config.js": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    "postcss.config.js": true,
+    "public": true,
+    "README.md": true,
+    "tailadmin-nextjs.jpg": true,
+    "tailwind.config.js": true,
+    "tsconfig.json": true
+  },
+  "hide-files.files": [],
+  "conventionalCommits.scopes": [
+    "global"
+  ]
+}
