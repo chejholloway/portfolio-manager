@@ -1,11 +1,8 @@
 "use client";
-import { ApexOptions } from "apexcharts";
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
-  ssr: false,
-});
+import { block } from "million/react-server";
 
 const ChartOne: React.FC = () => {
   return (
@@ -25,4 +22,6 @@ const ChartOne: React.FC = () => {
   );
 };
 
-export default ChartOne;
+const AdvancedRealTimeChartBlock = block(ChartOne);
+
+export default AdvancedRealTimeChartBlock;

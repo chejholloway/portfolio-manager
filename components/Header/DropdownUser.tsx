@@ -9,6 +9,7 @@ const DropdownUser = () => {
       <Link
         className="flex items-center gap-4"
         href="#"
+        prefetch={false}
       >
         <span className="h-12 w-12 rounded-full">
           <Image

@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Chat } from "@/types/chat";
 import { Timeline } from "react-ts-tradingview-widgets";
-
-
+import { block } from "million/react-server";
 
 const ChatCard = () => {
   return (
@@ -11,12 +10,11 @@ const ChatCard = () => {
       <h4 className="mb-6 text-xl font-semibold text-black dark:text-primary">
         News Feed
       </h4>
-
       <Timeline colorTheme="dark" feedMode="world-stocks" market="news" height={400} width="100%"></Timeline>
-
-
     </div>
   );
 };
 
-export default ChatCard;
+const TimelineBlock = block(ChatCard);
+
+export default TimelineBlock;

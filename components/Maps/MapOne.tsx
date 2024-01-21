@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { MarketOverview } from "react-ts-tradingview-widgets";
-
+import { block } from "million/react-server";
 
 const MapOne = () => {
   return (
@@ -21,4 +21,6 @@ const MapOne = () => {
   );
 };
 
-export default MapOne;
+const MarketOverviewBlock = block(MapOne);
+
+export default MarketOverviewBlock;

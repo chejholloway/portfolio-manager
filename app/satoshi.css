@@ -132,7 +132,3 @@
 .tradingview-widget-copyright {
   display: none;
 }
-
-[data-target-type*="copyright"] {
-  background: #ffff00;
-}

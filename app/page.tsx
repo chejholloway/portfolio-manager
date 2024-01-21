@@ -1,5 +1,5 @@
 "use client"
-import ECommerce from "@/components/Dashboard/E-commerce";
+import DashBoardBlock from "@/components/Dashboard/E-commerce";
 import { TradingViewProvider } from "../utils/TradingViewContext";
 import { Metadata } from "next";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <TradingViewProvider>
-      <ECommerce />
+      <DashBoardBlock />
     </TradingViewProvider>
   );
 }

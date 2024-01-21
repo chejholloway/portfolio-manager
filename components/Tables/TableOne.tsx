@@ -1,6 +1,7 @@
 import { BRAND } from "@/types/brand";
 import Image from "next/image";
 import { EconomicCalendar } from "react-ts-tradingview-widgets";
+import { block } from "million/react-server";
 
 const TableOne = () => {
   return (
@@ -16,4 +17,6 @@ const TableOne = () => {
   );
 };
 
-export default TableOne;
+const EconomicCalendarBlock = block(TableOne);
+
+export default EconomicCalendarBlock;
