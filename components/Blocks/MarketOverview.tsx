@@ -3,7 +3,7 @@ import React from "react";
 import { MarketOverview } from "react-ts-tradingview-widgets";
 import { block } from "million/react-server";
 
-const MapOne = () => {
+const MarketOverviewComponent = () => {
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-7.5  pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-7">
       <div className="mb-3 justify-between gap-4 sm:flex">
@@ -21,6 +21,6 @@ const MapOne = () => {
   );
 };
 
-const MarketOverviewBlock = block(MapOne);
+// const MarketOverviewBlock = block(MapMarketOverviewComponentOne);
 
-export default MarketOverviewBlock;
+export default MarketOverviewComponent;

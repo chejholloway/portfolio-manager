@@ -16,9 +16,21 @@
     "package-lock.json": true,
     "postcss.config.js": true,
     "README.md": true,
-    "tailadmin-nextjs.jpg": true
+    "tailadmin-nextjs.jpg": true,
+    "tailwind.config.js": true,
+    "tsconfig.json": true,
+    "video.d.ts": true,
+    "utils": true,
+    "public\\images": true,
+    "public": true,
+    "js": true,
+    "hooks": true
   },
-  "hide-files.files": [],
+  "hide-files.files": [
+    "tailwind.config.js",
+    "tsconfig.json",
+    "video.d.ts"
+  ],
   "conventionalCommits.scopes": [
     "global"
   ],

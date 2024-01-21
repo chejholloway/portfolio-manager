@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
-import { block } from "million/react-server";
+// import { block } from "million/react-server";
 
-const ChartThree: React.FC = () => {
+const TechnicalAnalysisComponent: React.FC = () => {
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
@@ -15,12 +15,12 @@ const ChartThree: React.FC = () => {
       </div>
 
       <div className="pb-8">
-        <TechnicalAnalysis colorTheme="dark" width="100%"></TechnicalAnalysis>
+        <TechnicalAnalysis colorTheme="dark" width="100%" symbol="NASDAQ:MSFT"></TechnicalAnalysis>
       </div>
     </div>
   );
 };
 
-const TechnicalAnalysisBlock = block(ChartThree);
+// const TechnicalAnalysisBlock = block(TechnicalAnalysisComponent);
 
-export default TechnicalAnalysisBlock;
+export default TechnicalAnalysisComponent;

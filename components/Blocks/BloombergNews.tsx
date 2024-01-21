@@ -6,9 +6,7 @@ import dynamic from "next/dynamic";
 import ReactPlayer from 'react-player';
 import { block } from "million/react-server";
 
-
-
-const ChartTwo: React.FC = () => {
+const BloombergNewsComponent: React.FC = () => {
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
@@ -32,6 +30,6 @@ const ChartTwo: React.FC = () => {
   );
 };
 
-const BloombergNewsBlock = block(ChartTwo);
+// const BloombergNewsBlock = block(BloombergNewsComponent);
 
-export default BloombergNewsBlock;
+export default BloombergNewsComponent;
