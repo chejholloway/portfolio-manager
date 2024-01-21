@@ -1,5 +1,5 @@
 "use client"
-import DashBoardBlock from "@/components/Dashboard/E-commerce";
+import DashBoardBlock from "@/components/Dashboard/SCGDashboard";
 import { TradingViewProvider } from "../utils/TradingViewContext";
 import { Metadata } from "next";
 
