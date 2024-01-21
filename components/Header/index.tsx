@@ -56,23 +56,19 @@ const Header = (props: {
           {/* <!-- Hamburger Toggle BTN --> */}
         </div>
 
-
-
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
-            <Image
+            <li>
+              <Image
               width={150}
               height={50}
               src={"/images/logo/logo.png"}
               alt="Logo"
               priority
-            />
-          {/* <!-- User Area --> */}
-          <DropdownUser />
-          {/* <!-- User Area --> */}
-            {/* <!-- Dark Mode Toggler --> */}
+              />
+            </li>
+            <DropdownUser />
             <DarkModeSwitcher />
-            {/* <!-- Dark Mode Toggler --> */}
           </ul>
         </div>
       </div>

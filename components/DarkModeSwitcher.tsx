@@ -6,12 +6,15 @@ const DarkModeSwitcher = () => {
   return (
     <li>
       <label
+        for="themeSwitcher"
         className={`relative m-0 block h-7.5 w-14 rounded-full ${
           colorMode === 'dark' ? 'bg-primary' : 'bg-stroke'
         }`}
       >
         <input
           type="checkbox"
+          name="themeSwitcher"
+          id="themeSwitcher"
           onChange={() => {
             if (typeof setColorMode === 'function') {
               setColorMode(colorMode === 'light' ? 'dark' : 'light');

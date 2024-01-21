@@ -1,8 +1,9 @@
 "use client";
+import { memo } from "react";
 import dynamic from "next/dynamic";
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
-const AdvancedRealtimeChartComponent: React.FC = () => {
+const AdvancedRealtimeChartComponent: React.FC = memo(() => {
   const titleText = "Realtime Data";
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
@@ -18,6 +19,6 @@ const AdvancedRealtimeChartComponent: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AdvancedRealtimeChartComponent;

@@ -1,7 +1,8 @@
 "use client";
+import { memo } from "react";
 import { MarketOverview } from "react-ts-tradingview-widgets";
 
-const MarketOverviewComponent = () => {
+const MarketOverviewComponent = memo(() => {
   const titleText = "Market Overview";
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-7.5  pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-7">
@@ -22,6 +23,6 @@ const MarketOverviewComponent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default MarketOverviewComponent;

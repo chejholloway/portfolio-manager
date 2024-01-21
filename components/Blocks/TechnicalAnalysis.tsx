@@ -1,8 +1,9 @@
 "use client";
+import { memo } from "react";
 import dynamic from "next/dynamic";
 import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
 
-const TechnicalAnalysisComponent: React.FC = () => {
+const TechnicalAnalysisComponent: React.FC = memo(() => {
   const headerText = "Technical Analysis";
 
   return (
@@ -18,6 +19,6 @@ const TechnicalAnalysisComponent: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default TechnicalAnalysisComponent;

@@ -5,7 +5,7 @@ import Image from "next/image";
 const DropdownUser = () => {
 
   return (
-    <div className="relative">
+    <li className="relative">
       <Link
         className="flex items-center gap-4"
         href="#"
@@ -27,7 +27,7 @@ const DropdownUser = () => {
         </span>
 
       </Link>
-    </div>
+    </li>
   );
 };
 
