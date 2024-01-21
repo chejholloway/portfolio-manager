@@ -23,9 +23,7 @@
     "hooks": true,
     "tailwind.config.js": true,
     "tsconfig.json": true,
-    "video.d.ts": true,
-    "app/globals.css": true,
-    "app/satoshi.css": true
+    "video.d.ts": true
   },
   "hide-files.files": [
     "tailwind.config.js",
