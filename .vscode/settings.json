@@ -7,6 +7,7 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     ".eslintrc.json": true,
+    ".gitignore": true,
     ".next": true,
     ".vscode": true,
     "LICENSE": true,
@@ -16,19 +17,23 @@
     "postcss.config.js": true,
     "README.md": true,
     "tailadmin-nextjs.jpg": true,
-    "tailwind.config.js": true,
-    "tsconfig.json": true,
-    "video.d.ts": true,
     "utils": true,
     "public\\images": true,
     "public": true,
     "js": true,
-    "hooks": true
+    "hooks": true,
+    "tailwind.config.js": true,
+    "tsconfig.json": true,
+    "video.d.ts": true,
+    "app/globals.css": true,
+    "app/satoshi.css": true
   },
   "hide-files.files": [
     "tailwind.config.js",
     "tsconfig.json",
-    "video.d.ts"
+    "video.d.ts",
+    "app/globals.css",
+    "app/satoshi.css"
   ],
   "conventionalCommits.scopes": [
     "global"
