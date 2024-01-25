@@ -13,6 +13,19 @@ module.exports = {
       satoshi: ["Satoshi", "sans-serif"],
     },
     colors: {
+      "brand": {
+        50: "#DAE2FC",
+        100: "#B9C9F9",
+        200: "#7292F3",
+        300: "#2859EC",
+        400: "#103AB7",
+        500: "#0A2471",
+        600: "#081C59",
+        700: "#061542",
+        800: "#040F2F",
+        900: "#020717",
+        950: "#010309"
+      },
       current: "currentColor",
       transparent: "transparent",
       white: "#FFFFFF",

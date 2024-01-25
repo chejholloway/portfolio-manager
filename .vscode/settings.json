@@ -21,9 +21,11 @@
     "public": true,
     "js": true,
     "hooks": true,
-    "tailwind.config.js": true,
     "tsconfig.json": true,
-    "video.d.ts": true
+    "video.d.ts": true,
+    ".vercel": true,
+    "dist": true,
+    "out": true
   },
   "hide-files.files": [
     "tailwind.config.js",
