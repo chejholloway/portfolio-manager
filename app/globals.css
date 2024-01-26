@@ -178,3 +178,11 @@ span.flatpickr-weekday,
 h4 {
   color: #F3B32A;
 }
+
+.tradingview-widget-copyright {
+  display: none;
+}
+
+div[id*='tradingview_'] {
+  width: 100%!important;
+}

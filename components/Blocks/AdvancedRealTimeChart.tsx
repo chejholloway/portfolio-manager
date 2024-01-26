@@ -1,22 +1,19 @@
 "use client";
-import { memo } from "react";
-import dynamic from "next/dynamic";
+import { memo, useEffect } from "react";
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
+import Title from "../common/Title/"
 
 const AdvancedRealtimeChartComponent: React.FC = memo(() => {
+  useEffect(() => {
+    const inputElement = document.querySelector("div[class*='inputContainer-'] > input[data-role='search']");
+
+    if (!inputElement) console.info('Input Not found')
+  }, []);
+
   const titleText = "Realtime Data";
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
-      <div className="mb-4 justify-between gap-4 sm:flex">
-        <div>
-          <h4 className="text-xl font-semibold text-black dark:text-primary">
-            {titleText}
-          </h4>
-        </div>
-      </div>
-      <div className="pb-8 h-[485px]">
-        <AdvancedRealTimeChart theme="dark" autosize />
-      </div>
+    <div className="w-full md:w-2/3">
+      <AdvancedRealTimeChart theme="dark" width="100%" />
     </div>
   );
 });
