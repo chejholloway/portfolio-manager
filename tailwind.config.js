@@ -14,12 +14,12 @@ module.exports = {
     },
     colors: {
       "brand": {
-        50: "#DAE2FC",
-        100: "#B9C9F9",
-        200: "#7292F3",
-        300: "#2859EC",
-        400: "#103AB7",
-        500: "#0A2471",
+        blue: "#0A2371",
+        gold: "#F3B32B",
+        "baby-blue": "#8EC7D2",
+        "mid-blue": "#0D6A87",
+        periwinkle: "#103AB7",
+        whale: "#07475A",
         600: "#081C59",
         700: "#061542",
         800: "#040F2F",

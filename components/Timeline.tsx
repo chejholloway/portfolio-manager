@@ -1,12 +1,14 @@
 import { memo } from "react";
 import { Timeline } from "react-ts-tradingview-widgets";
-import Title from "../common/Title/";
+import useLoadHandler from '../hooks/useLoadHandler';
 
 const TimelineComponent = memo(() => {
-  const titleText = "News Feed";
+  useLoadHandler("iframe[title='timeline TradingView widget']", (iFrame) => {
+    console.log('News Iframe Loaded:', iFrame);
+  });
 
   return (
-    <div className="w-full md:w-1/3">
+    <div className="w-full md:w-1/3 p-4 card">
       <Timeline
         colorTheme="dark"
         feedMode="world-stocks"

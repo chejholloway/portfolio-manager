@@ -1,12 +1,10 @@
 "use client";
 import { memo } from "react";
 import ReactPlayer from 'react-player';
-import Title from "../../components/common/Title";
 
 const BloombergNewsComponent: React.FC = memo(() => {
-  const titleText = "Bloomberg News";
   return (
-      <div className="w-full md:w-1/3">
+      <div className="w-full md:w-1/3 card p-4">
         <ReactPlayer
           light="https://talkingbiznews.com/wp-content/uploads/2015/09/Bloomberg-Live-300x300.png"
           playing

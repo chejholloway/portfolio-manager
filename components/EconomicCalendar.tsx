@@ -1,11 +1,13 @@
 import { memo } from "react";
 import { EconomicCalendar } from "react-ts-tradingview-widgets";
-import Title from "../common/Title/";
+import useLoadHandler from '../hooks/useLoadHandler';
 
 const EconomicCalendarComponent = memo(() => {
-  const titleText = "Economic Calendar";
+  useLoadHandler("iframe[title='timeline TradingView widget']", (iFrame) => {
+    console.log('Calendar Iframe Loaded:', iFrame);
+  });
   return (
-    <div className="w-full md:w-2/3">
+    <div className="w-full md:w-2/3 p-4 card">
       <EconomicCalendar
         colorTheme="dark"
         height={400}

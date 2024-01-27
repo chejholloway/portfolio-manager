@@ -1,25 +1,25 @@
 import dynamic from "next/dynamic";
 
-export const AdvancedRealTimeChartComponent = dynamic(() => import("../../components/Blocks/AdvancedRealTimeChart"), {
+export const AdvancedRealTimeChartComponent = dynamic(() => import("../../components/AdvancedRealTimeChart"), {
   ssr: false,
 });
 
-export const TimelineComponent = dynamic(() => import("../../components/Blocks/Timeline"), {
+export const TimelineComponent = dynamic(() => import("../../components/Timeline"), {
   ssr: false,
 });
 
-export const EconomicCalendarComponent = dynamic(() => import("../../components/Blocks/EconomicCalendar"), {
+export const EconomicCalendarComponent = dynamic(() => import("../../components/EconomicCalendar"), {
   ssr: false,
 });
 
-export const BloombergNewsComponent = dynamic(() => import("../../components/Blocks/BloombergNews"), {
+export const BloombergNewsComponent = dynamic(() => import("../../components/BloombergNews"), {
   ssr: false,
 });
 
-export const TechnicalAnalysisComponent = dynamic(() => import("../../components/Blocks/TechnicalAnalysis"), {
+export const TechnicalAnalysisComponent = dynamic(() => import("../../components/TechnicalAnalysis"), {
   ssr: false,
 });
 
-export const MarketOverviewComponent = dynamic(() => import("../../components/Blocks/MarketOverview"), {
+export const MarketOverviewComponent = dynamic(() => import("../../components/MarketOverview"), {
   ssr: false,
 });

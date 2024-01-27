@@ -41,4 +41,3 @@ videos/*
 !videos/*.ts
 public/_next-video
 /dist
-/.vscode

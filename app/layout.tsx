@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { TickerTape } from "react-ts-tradingview-widgets";
 import Loader from "@/components/common/Loader";
-import "./globals.css";
-import "./theme.css";
+import "./css/globals.css";
+import "./css/theme.css";
+import "./css/darkBlue.css";
 
 export default function RootLayout({
   children,
