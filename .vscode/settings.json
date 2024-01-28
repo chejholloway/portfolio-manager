@@ -41,7 +41,8 @@
   ],
   "conventionalCommits.scopes": [
     "global",
-    "stock ticker"
+    "stock ticker",
+    "news-feed"
   ],
   "cSpell.words": [
     "autosize",
