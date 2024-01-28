@@ -66,7 +66,7 @@ const BollingerBandsChart: React.FC = () => {
     <>
 
       <div className="w-full md:w-1/3 p-4 card">
-        <div id="container" ref={containerRef} className="h-[450px]"></div>
+        <div id="container" ref={containerRef} className="h-full"></div>
       </div>
 
     </>
