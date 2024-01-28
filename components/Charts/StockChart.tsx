@@ -7,6 +7,8 @@ import priceIndicator from "highcharts/modules/price-indicator";
 import fullScreen from "highcharts/modules/full-screen";
 import "../../app/css/gui.css";
 import "../../app/css/popup.css";
+import "../../app/css/dashboards.css";
+import { darkTheme } from "../../app/constants/themeOptions";
 
 indicatorsAll(Highcharts);
 annotationsAdvanced(Highcharts);
@@ -67,35 +69,13 @@ const StockChart: React.FC<StockChartProps> = () => {
       series: [],
     };
 
-    Highcharts.theme = {
-        colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
-                '#FF9655', '#FFF263', '#6AF9C4'],
-        chart: {
-            plotBackgroundColor: '#FCFFC5'
-        },
-        title: {
-            style: {
-                color: '#000',
-                font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
-            }
-        },
-        subtitle: {
-            style: {
-                color: '#666666',
-                font: 'bold 12px "Trebuchet MS", Verdana, sans-serif'
-            }
-        },
-        legend: {
-            itemStyle: {
-                font: '9pt Trebuchet MS, Verdana, sans-serif',
-                color: 'black'
-            },
-            itemHoverStyle:{
-                color: 'gray'
-            }
-        }
-    };
+    Highcharts.createElement('link', {
+      href: 'https://fonts.googleapis.com/css?family=Unica+One',
+      rel: 'stylesheet',
+      type: 'text/css'
+    }, null, document.getElementsByTagName('head')[0]);
 
+    Highcharts.theme = darkTheme;
     Highcharts.setOptions(Highcharts.theme);
 
     const fetchData = async (url: string, name: string) => {

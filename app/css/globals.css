@@ -91,10 +91,6 @@ div[id*='tradingview_'] {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-*:not(i) {
-	font-family: "Roboto Mono", monospace;
-  color: #ffffff;
-}
 
 .box {
 	position: absolute;
@@ -104,19 +100,6 @@ div[id*='tradingview_'] {
 	top: 50%;
 	left: 50%;
 }
-
-/* .card {
-	width: 100%;
-	background-color: rgba(11, 38, 118, 0.06);
-	-webkit-backdrop-filter: blur(15px);
-	backdrop-filter: blur(15px);
-	padding: 50px 25px;
-	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
-	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
-	border: 1.5px solid rgba(11, 38, 118, 0.06);
-	border-radius: none;
-} */
-
 
 .card {
   background: rgba(11, 38, 118, 0.2);
@@ -150,4 +133,15 @@ div[class*='PrivateSwitchBase-input'] {
 
 div[id^='highcharts-'] > svg > text.highcharts-credits {
   display: none;
+}
+
+span.highcharts-menu-item-btn {
+  filter: brightness(0) invert(1);
+}
+
+
+div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text {
+  text-shadow: none !important;
+  stroke: none;
+  fill: white!important;
 }
