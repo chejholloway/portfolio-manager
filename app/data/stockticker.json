@@ -1,0 +1,82 @@
+[
+  {
+    "proName": "FOREXCOM-SPXUSD",
+    "title": "S&P 500",
+    "price": "4885.9",
+    "color": "red",
+    "change": "-5.0 (-0.10%)",
+    "icon": "../assets/icon/s-and-p-500.svg"
+  },
+  {
+    "proName": "FOREXCOM:NSXUSD",
+    "title": "US 100",
+    "price": "17391.6",
+    "color": "red",
+    "change": "-00.1 (-0.40%)",
+    "icon": "../assets/icon/nasdaq-100.svg"
+  },
+  {
+    "description": "MICROSOFT",
+    "proName": "NASDAQ:MSFT",
+    "price": "",
+    "color": "red",
+    "change": "",
+    "icon": "../assets/icon/microsoft.svg"
+  },
+  {
+    "description": "SALESFORCE",
+    "proName": "NYSE:CRM",
+    "price": "279.94",
+    "color": "green",
+    "change": "+0.91 (+0.33%)",
+    "icon":
+  },
+  {
+    "description": "NIKE",
+    "proName": "NYSE:NKE",
+    "price": "102.75",
+    "color": "green",
+    "change": "+1.98 (+1.96%)",
+    "icon": "../assets/icon/nike.svg"
+  },
+  {
+    "description": "DISNEY",
+    "proName": "NYSE:DIS",
+    "price": "95.36",
+    "color": "green",
+    "change": "+0.50 (+0.53%)",
+    "icon": "../assets/icon/disney.svg"
+  },
+  {
+    "description": "B OF A",
+    "proName": "NYSE-BAC",
+    "price": "33.43",
+    "color": "green",
+    "change": "+0.04 (+0.12%)",
+    "icon": "../assets/icon/bank-of-america.svg"
+  },
+  {
+    "description": "DOW JONES",
+    "proName": "BLACKBULL:US30",
+    "price": "38096.30",
+    "color": "green",
+    "change": "+85.91 (+0.23%)",
+    "icon": "../assets/icon/dow-30.svg"
+  },
+  {
+    "description": "INTUIT",
+    "proName": "NASDAQ:INTU",
+    "price": "641.36",
+    "color": "red",
+    "change": "-0.13 (-0.13%)",
+    "icon": "../assets/icon/intuit.svg"
+  },
+  {
+    "description": "AMAZON",
+    "proName": "NASDAQ:AMZN",
+    "price": "159.12",
+    "color": "green",
+    "change": "+1.37 (+0.87%)",
+    "icon": "../assets/icon/amazon.svg"
+  }
+]

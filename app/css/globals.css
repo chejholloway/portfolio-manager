@@ -3,7 +3,7 @@
 
 :root
 {
-  --family:'Nunito', sans-serif;
+  --family:"Unica One", sans-serif;
 }
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
 
 @layer base {
   body {
-    @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
+    @apply font-normal text-base text-body bg-whiten relative z-1;
   }
 }
 
@@ -102,9 +102,9 @@ div[id*='tradingview_'] {
 }
 
 .card {
-  background: rgba(11, 38, 118, 0.2);
+  background: #24303f;
    border-radius: 10px;
-   border: 1px solid rgba(11, 38, 118, 0.2);
+   border: 1px solid rgba(52, 22, 9, 0.2);
     position:relative;
   color:white;
   z-index:1;
@@ -136,12 +136,22 @@ div[id^='highcharts-'] > svg > text.highcharts-credits {
 }
 
 span.highcharts-menu-item-btn {
-  filter: brightness(0) invert(1);
+  filter: grayscale(30%) brightness(80%);
+  -webkit-filter: grayscale(30%) brightness(80%);
 }
 
+div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text > tspan {
+  text-shadow: none !important;
+  stroke: none;
+  fill: white!important;
+}
 
 div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text {
   text-shadow: none !important;
   stroke: none;
   fill: white!important;
+}
+
+.stock {
+  font-family: "Unica One", sans-serif;
 }

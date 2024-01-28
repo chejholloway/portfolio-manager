@@ -14,9 +14,6 @@
     "package-lock.json": true,
     "postcss.config.js": true,
     "README.md": true,
-    "tailadmin-nextjs.jpg": true,
-    "public\\images": true,
-    "public": true,
     "js": true,
     ".vercel": true,
     "dist": true,
@@ -25,7 +22,6 @@
     "video.d.ts": true,
     "app/globals.css": true,
     "app/satoshi.css": true,
-    ".eslintrc.json": true,
     "app/page.tsx": true,
     "app/fonts": true
   },
@@ -44,7 +40,8 @@
     "components"
   ],
   "conventionalCommits.scopes": [
-    "global"
+    "global",
+    "stock ticker"
   ],
   "cSpell.words": [
     "autosize",
