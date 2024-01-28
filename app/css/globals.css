@@ -147,3 +147,7 @@ div[class*='PrivateSwitchBase-input'] {
   border-color: #434651;
   color: white!important;
 }
+
+div[id^='highcharts-'] > svg > text.highcharts-credits {
+  display: none;
+}
