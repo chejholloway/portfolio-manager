@@ -13,6 +13,7 @@ const CommoditiesGrid: React.FC = () => {
     <div className="w-full h-full md:w-2/3 card p-4">
         <DataGrid
           {...data}
+          id="commodities"
           loading={data.rows.length === 0}
           rowHeight={38}
           initialState={{

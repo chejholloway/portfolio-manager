@@ -13,7 +13,7 @@ const TimelineComponent = memo(() => {
         colorTheme="dark"
         feedMode="world-stocks"
         market="news"
-        height={400}
+        height={375}
         width="100%"/>
     </div>
   );

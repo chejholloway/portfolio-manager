@@ -93,7 +93,7 @@ div[id*='tradingview_'] {
 }
 *:not(i) {
 	font-family: "Roboto Mono", monospace;
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .box {
@@ -132,4 +132,18 @@ div[id*='tradingview_'] {
 .anychart-menuitem-content,
 ul[role='menu']  {
   color: #0A2371;
+}
+
+html.theme-dark .tv-embed-widget-wrapper__body {
+    background: #1e222d;
+    border-color: #434651;
+}
+
+div[class*='-MuiDataGrid-root'],
+div[class*='MuiDataGrid-footerContainer'],
+div[class*='MuiTablePagination-root'],
+div[class*='PrivateSwitchBase-input'] {
+  background: #1e222d;
+  border-color: #434651;
+  color: white!important;
 }
