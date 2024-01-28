@@ -7,20 +7,23 @@ interface BoxAndWhiskersChartProps {
 
 const BoxAndWhiskersChart: React.FC<BoxAndWhiskersChartProps> = ({ data }) => {
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <LineChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="q1" stroke="#8884d8" dot={false} />
-        <Line type="monotone" dataKey="median" stroke="#82ca9d" dot={false} />
-        <Line type="monotone" dataKey="q3" stroke="#8884d8" dot={false} />
-        <Line type="monotone" dataKey="min" stroke="#ff7300" dot={false} />
-        <Line type="monotone" dataKey="max" stroke="#ff7300" dot={false} />
-      </LineChart>
-    </ResponsiveContainer>
+    <div className="w-full md:w-1/3 p-4 card">
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="q1" stroke="#8884d8" dot={false} />
+          <Line type="monotone" dataKey="median" stroke="#82ca9d" dot={false} />
+          <Line type="monotone" dataKey="q3" stroke="#8884d8" dot={false} />
+          <Line type="monotone" dataKey="min" stroke="#ff7300" dot={false} />
+          <Line type="monotone" dataKey="max" stroke="#ff7300" dot={false} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+
   );
 };
 

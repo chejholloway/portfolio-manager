@@ -25,7 +25,6 @@
     "video.d.ts": true,
     "app/globals.css": true,
     "app/satoshi.css": true,
-    "next.config.mjs": true,
     ".eslintrc.json": true,
     "app/page.tsx": true,
     "app/fonts": true

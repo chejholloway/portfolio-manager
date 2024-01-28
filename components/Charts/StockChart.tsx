@@ -142,7 +142,7 @@ const StockChart: React.FC<StockChartProps> = () => {
 
   return (
     <div className="w-full md:w-2/3 p-4 card">
-      <div ref={containerRef} theme="dark" style={{ width: 'auto', height: '503px', background: 'transparent' }} />
+      <div ref={containerRef} style={{ width: 'auto', height:'400px', }} />
     </div>
   );
 };

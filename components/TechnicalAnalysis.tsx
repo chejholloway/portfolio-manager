@@ -2,6 +2,7 @@
 import { memo } from "react";
 import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
 import useLoadHandler from '../hooks/useLoadHandler';
+import BollingerBandsChart from "../components/Charts/BollingerBandsChart";
 
 const TechnicalAnalysisComponent: React.FC = memo(() => {
   useLoadHandler("iframe[title='technical analysis TradingView widget']", (iFrame) => {
@@ -11,11 +12,9 @@ const TechnicalAnalysisComponent: React.FC = memo(() => {
 
   return (
     <div className="w-full md:w-1/3 p-4 card">
-    <TechnicalAnalysis
-      colorTheme="dark"
-      width="100%"
-      symbol="NASDAQ:MSFT" />
+      <BollingerBandsChart />
     </div>
+
   );
 });
 

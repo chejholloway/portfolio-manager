@@ -15,7 +15,7 @@ const CommoditiesGrid: React.FC = () => {
           {...data}
           id="commodities"
           loading={data.rows.length === 0}
-          rowHeight={38}
+          rowHeight={25}
           initialState={{
             columns: {
               columnVisibilityModel: {
@@ -47,7 +47,7 @@ const CommoditiesGrid: React.FC = () => {
             },
             pagination: {
               paginationModel: {
-                pageSize: 7
+                pageSize: 4
               },
             },
           }}
