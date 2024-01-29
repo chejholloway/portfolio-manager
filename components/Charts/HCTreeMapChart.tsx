@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Highcharts from 'highcharts';
 import highchartsTreemap from 'highcharts/modules/treemap';
 import HighchartsReact from 'highcharts-react-official';
+import { treeMapData } from '../../app/data/treemapData.ts';
 
 // Initialize the treemap module
 highchartsTreemap(Highcharts);
@@ -15,7 +16,8 @@ const HCTreeMapChart: React.FC = () => {
         const response = await fetch(
           'https://www.highcharts.com/samples/data/world-mortality.json'
         );
-        const data = await response.json();
+        // const data = await response.json();
+        const data = treeMapData;
 
         let regionP,
           regionVal,

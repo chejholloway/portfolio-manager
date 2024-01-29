@@ -193,3 +193,18 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
   display: none;
 }
 
+g.highcharts-level-group-3 {
+  fill: green!important;
+}
+
+svg > g.highcharts-breadcrumbs-group > g > text {
+  color: white!important;
+  fill: white !important;
+}
+
+div[id^='highcharts-'] > svg >
+g.highcharts-series-group >
+g.highcharts-series.highcharts-series-0.highcharts-treemap-series.highcharts-color-0.highcharts-tracker >
+g.highcharts-level-group-3 > rect:nth-child(2) {
+  fill: green!important;
+}

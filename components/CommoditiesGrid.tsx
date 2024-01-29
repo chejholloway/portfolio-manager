@@ -6,9 +6,6 @@ import { commoditiesData } from '../app/data/commodities';
 const CommoditiesGrid: React.FC = () => {
   const { data } = commoditiesData;
 
-  console.log('Data');
-  console.log( data);
-
   return (
     <div className="w-full h-full md:w-2/3 card p-4">
         <DataGrid
@@ -29,7 +26,7 @@ const CommoditiesGrid: React.FC = () => {
                 feeRate: false,
                 feeAmount: false,
                 isFilled: false,
-                totalInUSD: false,
+                totalPrice: false,
                 unitPriceCurrency: false,
                 incoTerm: false,
                 brokerId: false,
@@ -52,7 +49,7 @@ const CommoditiesGrid: React.FC = () => {
               },
             },
           }}
-          pageSizeOptions={[5]}
+          pageSizeOptions={[5, 12]}
           checkboxSelection
           disableRowSelectionOnClick
         />

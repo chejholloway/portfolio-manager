@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import highchartsMore from 'highcharts/highcharts-more';
@@ -6,8 +7,7 @@ import exporting from 'highcharts/modules/exporting';
 import exportData from 'highcharts/modules/export-data';
 import accessibility from 'highcharts/modules/accessibility';
 import { darkTheme } from "../../app/constants/themeOptions";
-
-import axios from 'axios';
+import { rangeData } from '../../app/data/range.ts';
 
 // Initialize the module
 highchartsMore(Highcharts);
@@ -23,7 +23,8 @@ const HCBollingerBandsChart: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://www.highcharts.com/samples/data/range.json');
-        const data = response.data;
+        // const data = response.data;
+        const data = rangeData;
 
         const newOptions: Highcharts.Options = {
           chart: {
@@ -60,8 +61,9 @@ const HCBollingerBandsChart: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-1/3 p-4 card">
+    <div className="w-full md:w-1/3 p-4 card h-[503px]">
       <HighchartsReact
+        name="bollinger"
         highcharts={Highcharts}
         options={chartOptions}
         ref={chartRef as React.MutableRefObject<HighchartsReact.Props>}
