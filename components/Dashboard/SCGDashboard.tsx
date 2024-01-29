@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/Header/";
 import CommoditiesGrid from "@/components/CommoditiesGrid";
 import BollingerBandsChart from "@/components/Charts/BollingerBandsChart";
+import HCBollingerBandsChart from "@/components/Charts/HCBollingerBandsChart";
 import StockChart from "@/components/Charts/StockChart";
 import TreeMapChart from "@/components/Charts/TreeMapChart"
 import HCTreeMapChart from "@/components/Charts/HCTreeMapChart"
@@ -28,7 +29,7 @@ const DashBoard: React.FC = () => {
         <MarketOverviewComponent />
         <HCTreeMapChart />
         <CommoditiesGrid />
-        <BollingerBandsChart />
+        <HCBollingerBandsChart />
       </div>
     </>
   );
