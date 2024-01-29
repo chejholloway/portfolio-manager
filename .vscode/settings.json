@@ -42,7 +42,8 @@
     "global",
     "stock ticker",
     "news-feed",
-    "treemap-highcharts"
+    "treemap-highcharts",
+    "highcharts-bollinger"
   ],
   "cSpell.words": [
     "autosize",

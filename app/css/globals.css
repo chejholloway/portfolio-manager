@@ -125,7 +125,8 @@ html.theme-dark .tv-embed-widget-wrapper__body {
 div[class*='-MuiDataGrid-root'],
 div[class*='MuiDataGrid-footerContainer'],
 div[class*='MuiTablePagination-root'],
-div[class*='PrivateSwitchBase-input'] {
+div[class*='PrivateSwitchBase-input'],
+svg[class*='-MuiSvgIcon-root']  {
   background: #1e222d;
   border-color: #434651;
   color: white!important;
@@ -188,6 +189,7 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
   scrollbar-width: none; /* Firefox */
 }
 
-li[id='#switcher'] {
+#switcher {
   display: none;
 }
+

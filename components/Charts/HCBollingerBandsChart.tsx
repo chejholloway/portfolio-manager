@@ -1,11 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Highcharts from 'highcharts/highstock';
-import highchartsMore from 'highcharts/highcharts-more';// Import the arearange module
 import HighchartsReact from 'highcharts-react-official';
+import highchartsMore from 'highcharts/highcharts-more';
+import exporting from 'highcharts/modules/exporting';
+import exportData from 'highcharts/modules/export-data';
+import accessibility from 'highcharts/modules/accessibility';
+import { darkTheme } from "../../app/constants/themeOptions";
+
 import axios from 'axios';
 
 // Initialize the module
 highchartsMore(Highcharts);
+exporting(Highcharts);
+exportData(Highcharts);
+accessibility(Highcharts);
 
 const HCBollingerBandsChart: React.FC = () => {
   const chartRef = useRef<HighchartsReact.Props>(null);
@@ -28,7 +36,7 @@ const HCBollingerBandsChart: React.FC = () => {
             text: 'Price variation by day',
           },
           tooltip: {
-            valueSuffix: %C',
+            valueSuffix: '%',
           },
           series: [
             {

@@ -26,7 +26,7 @@ const NewsFeed: React.FC = () => {
   return (
     <div className="w-full md:w-1/3 p-4 card stock">
       <h1 className="text-3xl p-2"> Top Stories</h1>
-      <ul className="h-[400px] flex space-x-4 hide-scrollbar stock">
+      <ul className="h-[400px] flex space-x-4 no-scrollbar stock">
         <ScrollableFeed>
         {news.map(({ uuid, headline, image, provider, summary, url, date }) => (
           <li key={uuid} className="card flex">
@@ -37,8 +37,9 @@ const NewsFeed: React.FC = () => {
                   priority
                   src={image}
                   alt="Image"
-                  height={48}
-                  width={48}
+                  width={0}
+                  height={0}
+                  className="w-full h-[100px] object-cover"
                 />
                 <span>{new Date(date).toDateString()}</span>
                <p className="text-blue-500 text-ellipsis overflow-hidden ...">

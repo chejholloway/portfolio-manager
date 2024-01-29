@@ -1,13 +1,13 @@
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
+import { commoditiesData } from '../app/data/commodities';
 
 const CommoditiesGrid: React.FC = () => {
-  const { data } = useDemoData({
-    dataSet: 'Commodity',
-    rowLength: 1000,
-    editable: true,
-  });
+  const { data } = commoditiesData;
+
+  console.log('Data');
+  console.log( data);
 
   return (
     <div className="w-full h-full md:w-2/3 card p-4">
@@ -29,6 +29,7 @@ const CommoditiesGrid: React.FC = () => {
                 feeRate: false,
                 feeAmount: false,
                 isFilled: false,
+                totalInUSD: false,
                 unitPriceCurrency: false,
                 incoTerm: false,
                 brokerId: false,

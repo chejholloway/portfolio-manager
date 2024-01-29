@@ -137,7 +137,7 @@ const HCTreeMapChart: React.FC = () => {
     };
   }, []);
 
-  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[503px]"></div>;
+  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[440px]"></div>;
 };
 
 export default HCTreeMapChart;

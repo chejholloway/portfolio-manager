@@ -4,10 +4,8 @@ import dynamic from "next/dynamic";
 
 import Header from "@/components/Header/";
 import CommoditiesGrid from "@/components/CommoditiesGrid";
-import BollingerBandsChart from "@/components/Charts/BollingerBandsChart";
 import HCBollingerBandsChart from "@/components/Charts/HCBollingerBandsChart";
 import StockChart from "@/components/Charts/StockChart";
-import TreeMapChart from "@/components/Charts/TreeMapChart"
 import HCTreeMapChart from "@/components/Charts/HCTreeMapChart"
 import BoxPlotChart from "@/components/Charts/BoxPlotChart";
 import StockTicker from "../Ticker/StockTicker";
@@ -25,11 +23,11 @@ const DashBoard: React.FC = () => {
         <StockTicker />
         <BoxPlotChart />
         <StockChart />
-        <NewsFeed />
-        <MarketOverviewComponent />
-        <HCTreeMapChart />
-        <CommoditiesGrid />
         <HCBollingerBandsChart />
+        <MarketOverviewComponent />
+        <NewsFeed />
+        <CommoditiesGrid />
+        <HCTreeMapChart />
       </div>
     </>
   );
