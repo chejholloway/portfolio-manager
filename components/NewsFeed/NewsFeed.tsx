@@ -26,7 +26,7 @@ const NewsFeed: React.FC = () => {
   return (
     <div className="w-full md:w-1/3 p-4 card stock">
       <h1 className="text-3xl p-2"> Top Stories</h1>
-      <ul className="h-[400px] flex space-x-4 no-scrollbar stock">
+      <ul className="h-[400px] flex space-x-4 hide-scrollbar stock">
         <ScrollableFeed>
         {news.map(({ uuid, headline, image, provider, summary, url, date }) => (
           <li key={uuid} className="card flex">

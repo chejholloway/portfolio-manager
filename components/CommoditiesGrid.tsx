@@ -47,7 +47,7 @@ const CommoditiesGrid: React.FC = () => {
             },
             pagination: {
               paginationModel: {
-                pageSize: 4
+                pageSize: 12
               },
             },
           }}

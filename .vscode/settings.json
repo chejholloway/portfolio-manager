@@ -22,7 +22,6 @@
     "video.d.ts": true,
     "app/globals.css": true,
     "app/satoshi.css": true,
-    "app/page.tsx": true,
     "app/fonts": true
   },
   "hide-files.files": [

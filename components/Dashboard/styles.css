@@ -1,0 +1,49 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 1;
+}
+
+.col-3 {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    flex-direction: row;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .col-1 {
+    flex: 2;
+  }
+
+  .col-2 {
+    flex: 1;
+  }
+
+  .col-3 {
+    flex: 1;
+  }
+}

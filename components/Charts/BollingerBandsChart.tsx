@@ -5,8 +5,8 @@ const BollingerBandsChart: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Dynamic import AnyChart to ensure it's only loaded on the client side
-    import('anychart').then((anychart) => {
+    const renderChart = async () => {
+      const anychart = await import('anychart');
       const data = acme_corp_data();
       const dataSet = anychart.data.set(data);
       const firstSeriesData = dataSet.mapAs({ x: 0, low: 1, high: 2 });
@@ -15,7 +15,7 @@ const BollingerBandsChart: React.FC = () => {
         open: 3,
         high: 4,
         low: 5,
-        close: 6
+        close: 6,
       });
       const thirdSeriesData = dataSet.mapAs({ x: 0, value: 7 });
 
@@ -37,38 +37,47 @@ const BollingerBandsChart: React.FC = () => {
       });
 
       chart.tooltip().displayMode('union').titleFormat(function () {
-        return anychart.format.dateTime(this.points[0].x, 'MM/dd/yyyy', null, null);
-      }).unionFormat(function () {
-        return (
-          this.points[0].seriesName +
-          '\nHigh: ' + this.points[0].high.toFixed(2) +
-          '\nLow: ' + this.points[0].low.toFixed(2) +
-          '\n\n' +
-          this.points[1].seriesName +
-          '\nOpen: ' + this.points[1].open +
-          '\nHigh: ' + this.points[1].high +
-          '\nLow: ' + this.points[1].low +
-          '\nClose: ' + this.points[1].close +
-          '\n\n' +
-          this.points[2].seriesName +
-          '\nValue: ' + this.points[2].value.toFixed(2)
+        return anychart.format.dateTime(
+          this.points[0].x,
+          'MM/dd/yyyy',
+          null,
+          null
         );
+      }).unionFormat(function () {
+        return `${this.points[0].seriesName}
+          High: ${this.points[0].high.toFixed(2)}
+          Low: ${this.points[0].low.toFixed(2)}
+
+          ${this.points[1].seriesName}
+          Open: ${this.points[1].open}
+          High: ${this.points[1].high}
+          Low: ${this.points[1].low}
+          Close: ${this.points[1].close}
+
+          ${this.points[2].seriesName}
+          Value: ${this.points[2].value.toFixed(2)}`;
       });
 
       chart.container(containerRef.current!);
       chart.background().enabled(true);
       chart.background().fill('#24303F 0.2');
       chart.draw();
-    });
-  }, []);
+    };
+
+    // Invoke the async function immediately
+    renderChart();
+  }, []); // Empty dependency array to ensure it runs only once on mount
 
   return (
     <>
 
-      <div className="w-full md:w-1/3 p-4 card">
-        <div id="container" ref={containerRef} className="h-full"></div>
+      <div className="">
+        <div
+          id="container"
+          ref={containerRef}
+          style={{ height: '590px', width: '555px', position: 'absolute' }}
+        />
       </div>
-
     </>
   );
 };

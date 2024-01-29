@@ -18,7 +18,8 @@ const BoxPlotChart = () => {
 
   useEffect(() => {
     const chartOptions = BoxPlotChartOptions;
-    
+
+
     Highcharts.theme = darkTheme;
     Highcharts.setOptions(Highcharts.theme);
     Highcharts.chart(containerRef.current, chartOptions);
