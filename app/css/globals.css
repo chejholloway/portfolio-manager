@@ -187,3 +187,7 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+li[id='#switcher'] {
+  display: none;
+}

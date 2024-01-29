@@ -10,6 +10,7 @@ import CommoditiesGrid from "@/components/CommoditiesGrid";
 import BollingerBandsChart from "@/components/Charts/BollingerBandsChart";
 import StockChart from "@/components/Charts/StockChart";
 import TreeMapChart from "@/components/Charts/TreeMapChart";
+import HCTreeMapChart from "@/components/Charts/HCTreeMapChart";
 import BoxPlotChart from "@/components/Charts/BoxPlotChart";
 import StockTicker from "../Ticker/StockTicker";
 import NewsFeed from "../NewsFeed/NewsFeed";
