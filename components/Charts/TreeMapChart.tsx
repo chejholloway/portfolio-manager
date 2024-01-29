@@ -1,118 +1,143 @@
 import React, { useEffect, useRef } from 'react';
-import anychart from 'anychart';
+import Highcharts from 'highcharts';
+import highchartsTreemap from 'highcharts/modules/treemap';
+import HighchartsReact from 'highcharts-react-official';
+
+// Initialize the treemap module
+highchartsTreemap(Highcharts);
 
 const TreeMapChart: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  let chart: any = null;
+  const chartRef = useRef<Highcharts.Chart | null>(null);
 
   useEffect(() => {
-    const initializeChart = () => {
-      if (!containerRef.current) return;
+    const fetchDataAndCreateChart = async () => {
+      try {
+        const response = await fetch(
+          'https://www.highcharts.com/samples/data/world-mortality.json'
+        );
+        const data = await response.json();
 
-      const data = getData();
-      const treeData = anychart.data.tree(data, 'as-tree');
+        let regionP,
+          regionVal,
+          regionI = 0,
+          countryP,
+          countryI,
+          causeP,
+          causeI,
+          region,
+          country,
+          cause;
 
-      chart = anychart.treeMap(treeData);
-      chart.hintDepth(2);
-      chart.labels().format('{%name}');
+        const points = [],
+          causeName = {
+            'Communicable & other Group I': 'Communicable diseases',
+            'Noncommunicable diseases': 'Non-communicable diseases',
+            Injuries: 'Injuries'
+          };
 
-      chart.listen('chartDraw', () => {
-        const text = printPath(chart.getDrilldownPath());
-        chart.title().useHtml(true);
-        chart.title('All US Sectors ');
-      });
+        for (region in data) {
+          if (Object.hasOwnProperty.call(data, region)) {
+            regionVal = 0;
+            regionP = {
+              id: 'id_' + regionI,
+              name: region,
+              color: Highcharts.getOptions().colors[regionI]
+            };
+            countryI = 0;
+            for (country in data[region]) {
+              if (Object.hasOwnProperty.call(data[region], country)) {
+                countryP = {
+                  id: regionP.id + '_' + countryI,
+                  name: country,
+                  parent: regionP.id
+                };
+                points.push(countryP);
+                causeI = 0;
+                for (cause in data[region][country]) {
+                  if (Object.hasOwnProperty.call(data[region][country], cause)) {
+                    causeP = {
+                      id: countryP.id + '_' + causeI,
+                      name: causeName[cause],
+                      parent: countryP.id,
+                      value: Math.round(+data[region][country][cause])
+                    };
+                    regionVal += causeP.value;
+                    points.push(causeP);
+                    causeI = causeI + 1;
+                  }
+                }
+                countryI = countryI + 1;
+              }
+            }
+            regionP.value = Math.round(regionVal / countryI);
+            points.push(regionP);
+            regionI = regionI + 1;
+          }
+        }
 
-      chart.container(containerRef.current);
-      chart.draw();
+        const options: Highcharts.Options = {
+          series: [
+            {
+              name: 'Regions',
+              type: 'treemap',
+              layoutAlgorithm: 'squarified',
+              allowDrillToNode: true,
+              animationLimit: 1000,
+              dataLabels: {
+                enabled: false
+              },
+              levels: [
+                {
+                  level: 1,
+                  dataLabels: {
+                    enabled: true
+                  },
+                  borderWidth: 3,
+                  levelIsConstant: false
+                },
+                {
+                  level: 1,
+                  dataLabels: {
+                    style: {
+                      fontSize: '14px'
+                    }
+                  }
+                }
+              ],
+              accessibility: {
+                exposeAsGroupOnly: true
+              },
+              data: points
+            }
+          ],
+          title: {
+            text: 'Dummy Data',
+            align: 'left'
+          }
+        };
+
+        if (chartRef.current) {
+          chartRef.current.destroy();
+          chartRef.current = null;
+        }
+
+        chartRef.current = Highcharts.chart('treemap', options);
+      } catch (error) {
+        console.error('Error fetching or creating treemap chart:', error);
+      }
     };
 
-    initializeChart();
+    fetchDataAndCreateChart();
 
     return () => {
-      if (chart) {
-        chart.dispose();
+      if (chartRef.current) {
+        chartRef.current.destroy();
+        chartRef.current = null;
       }
     };
   }, []);
 
-  const drillToItem = () => {
-    const item = chart && chart.search('name', 'Item 3-4');
-    if (item) {
-      chart.drillTo(item);
-    }
-  };
-
-  const drillUpALevel = () => {
-    if (chart) {
-      chart.drillUp();
-    }
-  };
-
-  return (
-    <div className="w-full md:w-1/3 p-4 card">
-      <div id="treemap" ref={containerRef} className="h-full"></div>
-    </div>
-  );
+  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-full"></div>;
 };
-
-function getData() {
-  // create data
-  const data = [
-    { name: 'Sectors', children: [
-      { name: 'Agriculture', children: [
-        { name: 'Item 1-1', children: [
-          { name: 'Item 1-1-1', value: 1000 },
-          { name: 'Item 1-1-2', value: 600 },
-          { name: 'Item 1-1-3', value: 550 },
-          { name: 'Item 1-1-4', value: 300 },
-          { name: 'Item 1-1-5', value: 150 }
-        ]},
-        { name: 'Item 1-2', value: 2300 },
-        { name: 'Item 1-3', value: 1500 }
-      ]},
-      { name: 'Technology', children: [
-        { name: 'Item 2-1', children: [
-          { name: 'Item 2-1-1', value: 2100 },
-          { name: 'Item 2-1-2', value: 1000 },
-          { name: 'Item 2-1-3', value: 800 },
-          { name: 'Item 2-1-4', value: 750 }
-        ]},
-        { name: 'Item 2-2', children: [
-          { name: 'Item 2-2-1', value: 560 },
-          { name: 'Item 2-2-2', value: 300 },
-          { name: 'Item 2-2-3', value: 150 },
-          { name: 'Item 2-2-4', value: 90 }
-        ]},
-        { name: 'Item 2-3', value: 400 }
-      ]},
-      { name: 'Textiles', children: [
-        { name: 'Item 3-1', children: [
-          { name: 'Item 3-1-1', value: 850 },
-          { name: 'Item 3-1-2', value: 400 },
-          { name: 'Item 3-1-3', value: 150 }
-        ]},
-        { name: 'Item 3-2', value: 1350 },
-        { name: 'Item 3-3', value: 1300 },
-        { name: 'Item 3-4', children: [
-          { name: 'Item 3-4-1', value: 400 },
-          { name: 'Item 3-4-2', value: 300 },
-          { name: 'Item 3-4-3', value: 250 },
-          { name: 'Item 3-4-4', value: 150 }
-        ]}
-      ]}
-    ]}
-  ];
-  return data;
-}
-
-function printPath(path) {
-  let text = '';
-  if (path && path.length) {
-    for (let i = 0; i < path.length; i++) {
-      text += path[i].get('name') + '\\';
-    }
-  }
-  return text;
-}
 
 export default TreeMapChart;

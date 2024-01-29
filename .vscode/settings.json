@@ -42,7 +42,8 @@
   "conventionalCommits.scopes": [
     "global",
     "stock ticker",
-    "news-feed"
+    "news-feed",
+    "treemap-highcharts"
   ],
   "cSpell.words": [
     "autosize",

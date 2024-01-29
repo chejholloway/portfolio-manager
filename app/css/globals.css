@@ -102,7 +102,7 @@ div[id*='tradingview_'] {
 }
 
 .card {
-  background: #24303f;
+  background: transparent;
    border-radius: 10px;
    border: 1px solid rgba(52, 22, 9, 0.2);
     position:relative;
@@ -136,8 +136,8 @@ div[id^='highcharts-'] > svg > text.highcharts-credits {
 }
 
 span.highcharts-menu-item-btn {
-  filter: grayscale(30%) brightness(80%);
-  -webkit-filter: grayscale(30%) brightness(80%);
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
 }
 
 div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text > tspan {
@@ -153,5 +153,37 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
 }
 
 .stock {
-  font-family: "Unica One", sans-serif;
+  font-family: "Utica One", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
