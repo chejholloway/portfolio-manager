@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridValueGetterParams, GridToolbar } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
 import { commoditiesData } from '../app/data/commodities';
 
@@ -10,6 +10,7 @@ const CommoditiesGrid: React.FC = () => {
     <div className="w-full h-full md:w-2/3 card p-4">
         <DataGrid
           {...data}
+          slots={{ toolbar: GridToolbar }}
           id="commodities"
           loading={data.rows.length === 0}
           rowHeight={25}
