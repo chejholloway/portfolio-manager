@@ -3,6 +3,8 @@ import axios from 'axios';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import highchartsMore from 'highcharts/highcharts-more';
+import highchartsTreemap from 'highcharts/modules/treemap';
+import highchartsDarkUnica from 'highcharts/themes/dark-unica';
 import exporting from 'highcharts/modules/exporting';
 import exportData from 'highcharts/modules/export-data';
 import accessibility from 'highcharts/modules/accessibility';
@@ -11,9 +13,11 @@ import { rangeData } from '../../app/data/range.ts';
 
 // Initialize the module
 highchartsMore(Highcharts);
+highchartsTreemap(Highcharts);
 exporting(Highcharts);
 exportData(Highcharts);
 accessibility(Highcharts);
+highchartsDarkUnica(Highcharts);
 
 const HCBollingerBandsChart: React.FC = () => {
   const chartRef = useRef<HighchartsReact.Props>(null);
@@ -61,11 +65,12 @@ const HCBollingerBandsChart: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-1/3 p-4 card h-[503px]">
+    <div id="bollinger" className="w-full md:w-1/3 p-4 card h-[503px]">
       <HighchartsReact
         name="bollinger"
         highcharts={Highcharts}
         options={chartOptions}
+        height="460px"
         ref={chartRef as React.MutableRefObject<HighchartsReact.Props>}
       />
     </div>

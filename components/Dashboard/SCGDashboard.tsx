@@ -19,15 +19,15 @@ const DashBoard: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-wrap overflow-hidden bg-black-2">
+      <div className="flex flex-wrap overflow-hidden bg-black-2 px-20">
         <StockTicker />
         <BoxPlotChart />
         <StockChart />
         <HCBollingerBandsChart />
         <MarketOverviewComponent />
-        <NewsFeed />
-        <CommoditiesGrid />
         <HCTreeMapChart />
+        <CommoditiesGrid />
+        <NewsFeed />
       </div>
     </>
   );

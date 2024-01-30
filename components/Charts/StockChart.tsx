@@ -69,14 +69,14 @@ const StockChart: React.FC<StockChartProps> = () => {
       series: [],
     };
 
-    Highcharts.createElement('link', {
+ /*    Highcharts.createElement('link', {
       href: 'https://fonts.googleapis.com/css?family=Unica+One',
       rel: 'stylesheet',
       type: 'text/css'
     }, null, document.getElementsByTagName('head')[0]);
 
     Highcharts.theme = darkTheme;
-    Highcharts.setOptions(Highcharts.theme);
+    Highcharts.setOptions(Highcharts.theme); */
 
     const fetchData = async (url: string, name: string) => {
       try {

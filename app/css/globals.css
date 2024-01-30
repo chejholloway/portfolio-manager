@@ -16,23 +16,16 @@
 }
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
   }
-
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .chat-height {
-    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
-  }
-  .inbox-height {
-    @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
-  }
-}
 
 /* third-party libraries CSS */
 
@@ -202,9 +195,38 @@ svg > g.highcharts-breadcrumbs-group > g > text {
   fill: white !important;
 }
 
-div[id^='highcharts-'] > svg >
-g.highcharts-series-group >
-g.highcharts-series.highcharts-series-0.highcharts-treemap-series.highcharts-color-0.highcharts-tracker >
-g.highcharts-level-group-3 > rect:nth-child(2) {
+
+/* g.highcharts-level-group-3 > rect {
   fill: green!important;
+}
+
+g.highcharts-level-group-2 > rect {
+  fill: blue!important;
+}
+
+g.highcharts-level-group-1 > rect {
+  fill: orange!important;
+  opacity: 50%;
+} */
+
+div#bollinger > div {
+  height: 450px;
+}
+
+svg > rect[fill="rgb(255,0,102)"] {
+  fill:"blue"!important;
+}
+
+.new-fill {
+    fill: blue !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }

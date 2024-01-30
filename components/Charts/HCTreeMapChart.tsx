@@ -2,10 +2,13 @@ import React, { useEffect, useRef } from 'react';
 import Highcharts from 'highcharts';
 import highchartsTreemap from 'highcharts/modules/treemap';
 import HighchartsReact from 'highcharts-react-official';
+import highchartsDarkBlue from 'highcharts/themes/dark-blue';
+import { darkTheme } from "../../app/constants/themeOptions";
 import { treeMapData } from '../../app/data/treemapData.ts';
 
 // Initialize the treemap module
 highchartsTreemap(Highcharts);
+highchartsDarkBlue(Highcharts);
 
 const HCTreeMapChart: React.FC = () => {
   const chartRef = useRef<Highcharts.Chart | null>(null);
@@ -19,6 +22,8 @@ const HCTreeMapChart: React.FC = () => {
         // const data = await response.json();
         const data = treeMapData;
 
+        const targetRects = document.querySelectorAll('rect[fill="rgb(255,0,102)"]');
+        console.log(targetRects);
         let regionP,
           regionVal,
           regionI = 0,
@@ -139,7 +144,7 @@ const HCTreeMapChart: React.FC = () => {
     };
   }, []);
 
-  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[440px]"></div>;
+  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[485px]"></div>;
 };
 
 export default HCTreeMapChart;

@@ -5,7 +5,7 @@ import { TickerTape } from "react-ts-tradingview-widgets";
 import Loader from "@/components/common/Loader";
 import "./css/globals.css";
 // import "./css/theme.css";
-import "./css/darkUnica.css";
+// import "./css/darkUnica.css";
 
 export default function RootLayout({
   children,
