@@ -16,8 +16,6 @@
     "README.md": true,
     "js": true,
     ".vercel": true,
-    "dist": true,
-    "out": true,
     "tsconfig.json": true,
     "video.d.ts": true,
     "app/globals.css": true,

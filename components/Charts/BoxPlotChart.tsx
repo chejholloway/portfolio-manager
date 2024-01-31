@@ -27,7 +27,10 @@ const BoxPlotChart = () => {
 
   return (
     <div className="w-full md:w-1/3 p-4 card">
-      <div ref={containerRef} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={BoxPlotChartOptions}
+        containerProps={{ ref: chartRef }} />
     </div>
   );
 };

@@ -128,7 +128,8 @@ const HCTreeMapChart: React.FC = () => {
           chartRef.current = null;
         }
 
-        chartRef.current = Highcharts.chart('treemap', options);
+        // Use HighchartsReact component and pass the chartRef
+        chartRef.current = Highcharts.chart(options);
       } catch (error) {
         console.error('Error fetching or creating treemap chart:', error);
       }
@@ -144,7 +145,16 @@ const HCTreeMapChart: React.FC = () => {
     };
   }, []);
 
-  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[485px]"></div>;
+  // Use HighchartsReact component and pass the chartRef
+  return(
+    <div className="w-full md:w-1/3 p-4 card h-[485px]">
+      <HighchartsReact
+          highcharts={Highcharts}
+          options={options}
+          containerProps={{ id: 'treemap'}} />
+    </div>
+
+  )
 };
 
 export default HCTreeMapChart;

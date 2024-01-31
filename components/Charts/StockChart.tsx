@@ -7,7 +7,7 @@ import priceIndicator from "highcharts/modules/price-indicator";
 import fullScreen from "highcharts/modules/full-screen";
 import "../../app/css/gui.css";
 import "../../app/css/popup.css";
-import "../../app/css/dashboards.css";
+// import "../../app/css/dashboards.css";
 import { darkTheme } from "../../app/constants/themeOptions";
 
 indicatorsAll(Highcharts);
@@ -68,15 +68,6 @@ const StockChart: React.FC<StockChartProps> = () => {
       },
       series: [],
     };
-
- /*    Highcharts.createElement('link', {
-      href: 'https://fonts.googleapis.com/css?family=Unica+One',
-      rel: 'stylesheet',
-      type: 'text/css'
-    }, null, document.getElementsByTagName('head')[0]);
-
-    Highcharts.theme = darkTheme;
-    Highcharts.setOptions(Highcharts.theme); */
 
     const fetchData = async (url: string, name: string) => {
       try {
