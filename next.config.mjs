@@ -2,9 +2,9 @@ import million from "million/compiler";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { unoptimized: true },
+  // images: { unoptimized: true },
   reactStrictMode: false,
-  output: 'export',
+  // output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   }

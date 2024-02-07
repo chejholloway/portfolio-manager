@@ -44,7 +44,6 @@ export const BoxPlotChartOptions = {
         },
       }, {
         name: 'Outliers',
-        color: Highcharts.getOptions().colors[0],
         type: 'scatter',
         data: [
           [0, 644],
@@ -54,8 +53,7 @@ export const BoxPlotChartOptions = {
         ],
         marker: {
           fillColor: 'white',
-          lineWidth: 1,
-          lineColor: Highcharts.getOptions().colors[0],
+          lineWidth: 1
         },
         tooltip: {
           pointFormat: 'Observation: {point.y}',

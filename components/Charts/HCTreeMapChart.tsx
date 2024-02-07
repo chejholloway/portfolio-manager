@@ -47,8 +47,7 @@ const HCTreeMapChart: React.FC = () => {
             regionVal = 0;
             regionP = {
               id: 'id_' + regionI,
-              name: region,
-              color: Highcharts.getOptions().colors[regionI]
+              name: region
             };
             countryI = 0;
             for (country in data[region]) {
