@@ -12,12 +12,14 @@ import { darkTheme } from "../../app/constants/themeOptions";
 import { rangeData } from '../../app/data/range.ts';
 
 // Initialize the module
-highchartsMore(Highcharts);
-highchartsTreemap(Highcharts);
-exporting(Highcharts);
-exportData(Highcharts);
-accessibility(Highcharts);
-highchartsDarkUnica(Highcharts);
+if (typeof Highcharts === 'object') {
+  highchartsMore(Highcharts);
+  highchartsTreemap(Highcharts);
+  exporting(Highcharts);
+  exportData(Highcharts);
+  accessibility(Highcharts);
+  highchartsDarkUnica(Highcharts);
+}
 
 const HCBollingerBandsChart: React.FC = () => {
   const chartRef = useRef<HighchartsReact.Props>(null);

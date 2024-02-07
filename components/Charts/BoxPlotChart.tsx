@@ -8,11 +8,13 @@ import accessibility from 'highcharts/modules/accessibility';
 import { darkTheme } from "../../app/constants/themeOptions";
 import { BoxPlotChartOptions } from "../../app/constants/BoxPlotChartOptions";
 // Initialize the additional modules
-highchartsMore(Highcharts);
-exporting(Highcharts);
-exportData(Highcharts);
-accessibility(Highcharts);
+if (typeof Highcharts === 'object') {
+  highchartsMore(Highcharts);
+  exporting(Highcharts);
+  exportData(Highcharts);
+  accessibility(Highcharts);
 
+}
 const BoxPlotChart = () => {
   const containerRef = useRef(null);
 
@@ -27,10 +29,7 @@ const BoxPlotChart = () => {
 
   return (
     <div className="w-full md:w-1/3 p-4 card">
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={BoxPlotChartOptions}
-        containerProps={{ ref: chartRef }} />
+      <div ref={containerRef} />
     </div>
   );
 };

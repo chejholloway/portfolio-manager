@@ -7,8 +7,10 @@ import { darkTheme } from "../../app/constants/themeOptions";
 import { treeMapData } from '../../app/data/treemapData.ts';
 
 // Initialize the treemap module
-highchartsTreemap(Highcharts);
-highchartsDarkBlue(Highcharts);
+if (typeof Highcharts === 'object') {
+  highchartsTreemap(Highcharts);
+  highchartsDarkBlue(Highcharts);
+}
 
 const HCTreeMapChart: React.FC = () => {
   const chartRef = useRef<Highcharts.Chart | null>(null);
@@ -16,14 +18,12 @@ const HCTreeMapChart: React.FC = () => {
   useEffect(() => {
     const fetchDataAndCreateChart = async () => {
       try {
-        const response = await fetch(
+/*         const response = await fetch(
           'https://www.highcharts.com/samples/data/world-mortality.json'
-        );
+        ); */
         // const data = await response.json();
         const data = treeMapData;
 
-        const targetRects = document.querySelectorAll('rect[fill="rgb(255,0,102)"]');
-        console.log(targetRects);
         let regionP,
           regionVal,
           regionI = 0,
@@ -128,8 +128,7 @@ const HCTreeMapChart: React.FC = () => {
           chartRef.current = null;
         }
 
-        // Use HighchartsReact component and pass the chartRef
-        chartRef.current = Highcharts.chart(options);
+        chartRef.current = Highcharts.chart('treemap', options);
       } catch (error) {
         console.error('Error fetching or creating treemap chart:', error);
       }
@@ -145,16 +144,7 @@ const HCTreeMapChart: React.FC = () => {
     };
   }, []);
 
-  // Use HighchartsReact component and pass the chartRef
-  return(
-    <div className="w-full md:w-1/3 p-4 card h-[485px]">
-      <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-          containerProps={{ id: 'treemap'}} />
-    </div>
-
-  )
+  return <div id="treemap" className="w-full md:w-1/3 p-4 card h-[485px]"></div>;
 };
 
 export default HCTreeMapChart;

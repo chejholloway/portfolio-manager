@@ -17,6 +17,7 @@ const DropdownUser = () => {
             height={112}
             src={"/images/task/user-05.png"}
             alt="User"
+            priority
           />
         </span>
         <span className="hidden text-left lg:block">

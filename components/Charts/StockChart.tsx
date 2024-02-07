@@ -10,11 +10,13 @@ import "../../app/css/popup.css";
 // import "../../app/css/dashboards.css";
 import { darkTheme } from "../../app/constants/themeOptions";
 
-indicatorsAll(Highcharts);
-annotationsAdvanced(Highcharts);
-priceIndicator(Highcharts);
-fullScreen(Highcharts);
-StockTools(Highcharts);
+if (typeof Highcharts === 'object') {
+  indicatorsAll(Highcharts);
+  annotationsAdvanced(Highcharts);
+  priceIndicator(Highcharts);
+  fullScreen(Highcharts);
+  StockTools(Highcharts);
+}
 
 interface StockChartProps {}
 
