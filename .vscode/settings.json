@@ -16,11 +16,17 @@
     "README.md": true,
     "js": true,
     ".vercel": true,
+    "tailwind.config.js": true,
     "tsconfig.json": true,
     "video.d.ts": true,
     "app/globals.css": true,
     "app/satoshi.css": true,
-    "app/fonts": true
+    "next.config.mjs": true,
+    ".eslintrc.json": true,
+    "app/page.tsx": true,
+    "components/Header": true,
+    "app/fonts": true,
+    "components": true
   },
   "hide-files.files": [
     "tailwind.config.js",
@@ -29,7 +35,6 @@
     "app/globals.css",
     "app/satoshi.css",
     "next.config.mjs",
-    "app/css",
     ".eslintrc.json",
     "app/page.tsx",
     "components/Header",

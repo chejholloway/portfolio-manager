@@ -1,10 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/satoshi");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
-:root
-{
-  --family:"Unica One", sans-serif;
+:root {
+  --family: "Unica One", sans-serif;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,33 +16,40 @@
 }
 
 @layer utilities {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-     /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-    }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
 
 /* third-party libraries CSS */
 
-.tableCheckbox:checked ~ div span {
+.tableCheckbox:checked~div span {
   @apply opacity-100;
 }
-.tableCheckbox:checked ~ div {
+
+.tableCheckbox:checked~div {
   @apply bg-primary border-primary;
 }
 
-.taskCheckbox:checked ~ .box span {
+.taskCheckbox:checked~.box span {
   @apply opacity-100;
 }
-.taskCheckbox:checked ~ p {
+
+.taskCheckbox:checked~p {
   @apply line-through;
 }
-.taskCheckbox:checked ~ .box {
+
+.taskCheckbox:checked~.box {
   @apply bg-primary border-primary dark:border-primary;
 }
 
@@ -51,9 +58,11 @@
   background-repeat: no-repeat;
   background-size: 20px;
 }
+
 .custom-input-date-1::-webkit-calendar-picker-indicator {
   background-image: url("/images/icon/icon-calendar.svg");
 }
+
 .custom-input-date-2::-webkit-calendar-picker-indicator {
   background-image: url("/images/icon/icon-arrow-down.svg");
 }
@@ -73,59 +82,60 @@ h4 {
 }
 
 div[id*='tradingview_'] {
-  width: 100%!important;
+  width: 100% !important;
 }
 
 *,
 *:before,
 *:after {
-	padding: 0;
-	margin: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .box {
-	position: absolute;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .card {
   background: transparent;
-   border-radius: 10px;
-   border: 1px solid rgba(52, 22, 9, 0.2);
-    position:relative;
-  color:white;
-  z-index:1;
-    backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(52, 22, 9, 0.2);
+  position: relative;
+  color: white;
+  z-index: 1;
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
 .anychart-menuitem-content,
-ul[role='menu']  {
+ul[role='menu'] {
   color: #0A2371;
 }
 
 html.theme-dark .tv-embed-widget-wrapper__body {
-    background: #1e222d;
-    border-color: #434651;
+  background: #1e222d;
+  border-color: #434651;
 }
 
 div[class*='-MuiDataGrid-root'],
 div[class*='MuiDataGrid-footerContainer'],
 div[class*='MuiTablePagination-root'],
 div[class*='PrivateSwitchBase-input'],
-svg[class*='-MuiSvgIcon-root']  {
-  background: #1e222d;
+svg[class*='-MuiSvgIcon-root'] {
+  background: white;
   border-color: #434651;
-  color: white!important;
+  color: #1e222d !important;
 }
 
-div[id^='highcharts-'] > svg > text.highcharts-credits {
+div[id^='highcharts-']>svg>text.highcharts-credits {
   display: none;
 }
 
@@ -134,16 +144,16 @@ span.highcharts-menu-item-btn {
   -webkit-filter: brightness(0) invert(1);
 }
 
-div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text > tspan {
+div[id^='highcharts-']>svg>g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis>text>tspan {
   text-shadow: none !important;
   stroke: none;
-  fill: white!important;
+  fill: white !important;
 }
 
-div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis > text {
+div[id^='highcharts-']>svg>g.highcharts-axis-labels.highcharts-xaxis-labels.highcharts-navigator-xaxis>text {
   text-shadow: none !important;
   stroke: none;
-  fill: white!important;
+  fill: white !important;
 }
 
 .stock {
@@ -152,23 +162,23 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+  background: #888;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -178,8 +188,10 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 #switcher {
@@ -187,11 +199,11 @@ div[id^='highcharts-'] > svg > g.highcharts-axis-labels.highcharts-xaxis-labels.
 }
 
 g.highcharts-level-group-3 {
-  fill: green!important;
+  fill: green !important;
 }
 
-svg > g.highcharts-breadcrumbs-group > g > text {
-  color: white!important;
+svg>g.highcharts-breadcrumbs-group>g>text {
+  color: white !important;
   fill: white !important;
 }
 
@@ -209,24 +221,26 @@ g.highcharts-level-group-1 > rect {
   opacity: 50%;
 } */
 
-div#bollinger > div {
+div#bollinger>div {
   height: 450px;
 }
 
-svg > rect[fill="rgb(255,0,102)"] {
-  fill:"blue"!important;
+svg>rect[fill="rgb(255,0,102)"] {
+  fill: "blue" !important;
 }
 
 .new-fill {
-    fill: blue !important;
+  fill: blue !important;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

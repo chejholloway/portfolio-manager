@@ -41,3 +41,4 @@ videos/*
 !videos/*.ts
 public/_next-video
 /dist
+next.config-other.mjs

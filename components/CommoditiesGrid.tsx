@@ -7,11 +7,10 @@ const CommoditiesGrid: React.FC = () => {
   const { data } = commoditiesData;
 
   return (
-    <div className="w-full h-full md:w-2/3 card p-4">
+    <div className="w-full h-full md:w-2/3 card p-4 bg-white">
         <DataGrid
           {...data}
           slots={{ toolbar: GridToolbar }}
-          id="commodities"
           loading={data.rows.length === 0}
           rowHeight={25}
           initialState={{
@@ -19,6 +18,8 @@ const CommoditiesGrid: React.FC = () => {
               columnVisibilityModel: {
                 id: false,
                 status: false,
+                filledQuantity: false,
+                rateType: false,
                 traderName: false,
                 desk: false,
                 traderEmail: false,
@@ -40,7 +41,7 @@ const CommoditiesGrid: React.FC = () => {
                 taxCode: false,
                 lastUpdated: false,
                 dateCreated: false,
-                unitPriceCurrency: false,
+                counterPartyCurrency: false,
                 contractType: false
               },
             },
